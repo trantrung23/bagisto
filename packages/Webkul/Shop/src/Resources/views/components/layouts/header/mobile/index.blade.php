@@ -24,7 +24,7 @@
                     <div class="flex justify-between items-center">
                         <a href="{{ route('shop.home.index') }}">
                             <img
-                                src="{{ bagisto_asset('images/logo.svg') }}"
+                                src="{{ core()->getCurrentChannel()->logo_url ?? bagisto_asset('images/logo.svg') }}"
                                 alt="Bagisto"
                                 width="131"
                                 height="29"
@@ -46,10 +46,9 @@
                         @guest('customer')
                             <a
                                 href="{{ route('shop.customer.session.create') }}"
-                                class="flex text-base font-medium"
+                                class="flex text-sm font-medium"
                             >
-                                @lang('Sign up or Login')
-
+                                @lang('shop::app.components.layouts.header.sign-up-or-login')
                                 <i class="icon-double-arrow text-2xl ml-2.5"></i>
                             </a>
                         @endguest
@@ -67,9 +66,8 @@
                     <v-mobile-category></v-mobile-category>
 
                     <!-- Localization & Currency Section -->
-                    <div class="absolute w-full flex bottom-0 left-0 bg-white shadow-lg p-4 gap-x-5 justify-between items-center mb-4">
+                    {{-- <div class="absolute w-full flex bottom-0 left-0 bg-white shadow-lg p-4 gap-x-5 justify-between items-center mb-4">
                         <x-shop::dropdown position="top-left">
-                            <!-- Dropdown Toggler -->
                             <x-slot:toggle>
                                 <div class="w-full flex gap-2.5 justify-between items-center cursor-pointer" role="button">
                                     <span>
@@ -83,7 +81,6 @@
                                 </div>
                             </x-slot:toggle>
 
-                            <!-- Dropdown Content -->
                             <x-slot:content class="!p-0">
                                 <v-currency-switcher></v-currency-switcher>
                             </x-slot:content>
@@ -91,7 +88,6 @@
 
                         <x-shop::dropdown position="top-right">
                             <x-slot:toggle>
-                                <!-- Dropdown Toggler -->
                                 <div class="w-full flex gap-2.5 justify-between items-center cursor-pointer" role="button">
                                     <img
                                         src="{{ ! empty(core()->getCurrentLocale()->logo_url)
@@ -115,11 +111,16 @@
                                 </div>
                             </x-slot:toggle>
 
-                            <!-- Dropdown Content -->
                             <x-slot:content class="!p-0">
                                 <v-locale-switcher></v-locale-switcher>
                             </x-slot:content>
                         </x-shop::dropdown>
+                    </div> --}}
+
+                    <div class="absolute w-full flex bottom-0 left-0 bg-white shadow-lg px-2 py-4 gap-x-5 justify-between items-center mb-4">
+                        <p class="text-xs font-medium">
+                            @lang('shop::app.components.layouts.header.slogan')
+                        </p>
                     </div>
                 </x-slot:content>
 
@@ -132,7 +133,7 @@
                 aria-label="@lang('shop::app.components.layouts.header.bagisto')"
             >
                 <img
-                    src="{{ bagisto_asset('images/logo.svg') }}"
+                    src="{{ core()->getCurrentChannel()->logo_url ?? bagisto_asset('images/logo.svg') }}"
                     alt="Bagisto"
                     width="131"
                     height="29"

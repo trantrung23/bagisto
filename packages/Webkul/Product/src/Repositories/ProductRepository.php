@@ -337,7 +337,7 @@ class ProductRepository extends Repository
                  * To Do (@devansh): Need to monitor this.
                  */
                 $qb->groupBy('products.id');
-                $qb->havingRaw('COUNT(*) = ' . count($attributes));
+                // $qb->havingRaw('COUNT(*) = ' . count($attributes));
             }
 
             /**

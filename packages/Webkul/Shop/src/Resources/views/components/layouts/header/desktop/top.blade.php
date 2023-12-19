@@ -1,7 +1,5 @@
-<div class="flex justify-between items-center w-full py-3 px-16 border border-t-0 border-b border-l-0 border-r-0">
-    <!-- Currency Switcher -->
+{{-- <div class="flex justify-center items-center w-full py-3 px-16 border border-t-0 border-b border-l-0 border-r-0">
     <x-shop::dropdown>
-        <!-- Dropdown Toggler -->
         <x-slot:toggle>
             <div
                 class="flex gap-2.5 cursor-pointer" role="button"
@@ -18,7 +16,6 @@
             </div>
         </x-slot:toggle>
 
-        <!-- Dropdown Content -->
         <x-slot:content class="!p-0">
             <v-currency-switcher></v-currency-switcher>
         </x-slot:content>
@@ -28,10 +25,8 @@
         Get UPTO 40% OFF on your 1st order <a href="{{ route('shop.home.index') }}" class="underline">SHOP NOW</a>
     </p>
 
-    <!-- Locales Switcher -->
     <x-shop::dropdown position="bottom-right">
         <x-slot:toggle>
-            <!-- Dropdown Toggler -->
             <div
                 class="flex items-center gap-2.5 cursor-pointer"
                 role="button"
@@ -59,11 +54,16 @@
             </div>
         </x-slot:toggle>
     
-        <!-- Dropdown Content -->
         <x-slot:content class="!p-0">
             <v-locale-switcher></v-locale-switcher>
         </x-slot:content>
     </x-shop::dropdown>
+</div> --}}
+
+<div class="flex justify-center items-center w-full py-3 px-16 border border-t-0 border-b-[1px] border-l-0 border-r-0">
+    <p class="text-xs font-medium">
+        @lang('shop::app.components.layouts.header.slogan')
+    </p>
 </div>
 
 @pushOnce('scripts')

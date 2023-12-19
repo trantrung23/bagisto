@@ -9,7 +9,7 @@
         <div class="flex gap-5 items-center max-w-[745px]">
             <div class="w-full">
                 <img
-                    src="{{ bagisto_asset('images/logo.svg') }}"
+                    src="{{ core()->getCurrentChannel()->logo_url ?? bagisto_asset('images/logo.svg') }}"
                     class="mb-6"
                 >
 

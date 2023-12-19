@@ -93,9 +93,9 @@
         @endif
     </div>
 
-    <div class="flex justify-between  px-[60px] py-3.5 bg-[#F1EADF]">
+    <div class="flex justify-center px-2 lg:px-[60px] py-3.5 bg-[#F1EADF]">
         <p class="text-sm text-[#4D4D4D]">
-            @lang('shop::app.components.layouts.footer.footer-text')
+            @lang('shop::app.components.layouts.footer.footer-text', ['current_year' => date('Y')])
         </p>
     </div>
 </footer>
