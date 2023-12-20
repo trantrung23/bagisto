@@ -489,16 +489,20 @@ return [
     ],
   ],
   'search' => [
-    'title' => 'Kết quả tìm kiếm cho : :query',
+    'title'   => 'Kết quả tìm kiếu cho : :query',
+    'results' => 'Kết quả tìm kiếm',
+
     'images' => [
-      'index' => [
-        'something-went-wrong' => 'Đã xảy ra lỗi, vui lòng thử lại sau.',
-        'size-limit-error' => 'Lỗi giới hạn kích thước',
-        'only-images-allowed' => 'Chỉ cho phép hình ảnh (.jpeg, .jpg, .png, ..).',
-      ],
-      'results' => [
-        'analysed-keywords' => 'Từ khóa được phân tích:',
-      ],
+        'index' => [
+            'something-went-wrong' => 'Đã xảy ra lỗi, vui lòng thử lại sau..',
+            'size-limit-error'     => 'Lỗi giới hạn kích thước',
+            'search'               => 'Tìm kiếm',
+            'only-images-allowed'  => 'Chỉ cho phép hình ảnh (.jpeg, .jpg, .png, ..)..',
+        ],
+
+        'results' => [
+            'analysed-keywords' => 'Từ khóa được phân tích:',
+        ],
     ],
   ],
   'compare' => [
