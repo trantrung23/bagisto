@@ -15,11 +15,11 @@
         'type'       => 'footer_links',
         'status'     => 1,
         'channel_id' => core()->getCurrentChannel()->id,
-    ]); 
+    ]);
 @endphp
 
 <footer class="mt-9 bg-lightOrange max-sm:mt-8">
-    <div class="flex gap-x-6 gap-y-8 justify-between p-[60px] max-1060:flex-wrap max-1060:flex-col-reverse max-sm:px-4">
+    {{-- <div class="flex gap-x-6 gap-y-8 justify-between p-[60px] max-1060:flex-wrap max-1060:flex-col-reverse max-sm:px-4">
         <div class="flex gap-24 items-start flex-wrap max-1180:gap-6 max-1060:justify-between">
             @if ($customization?->options)
                 @foreach ($customization->options as $footerLinkSection)
@@ -29,7 +29,7 @@
                                 return $a['sort_order'] - $b['sort_order'];
                             });
                         @endphp
-                        
+
                         @foreach ($footerLinkSection as $link)
                             <li>
                                 <a href="{{ $link['url'] }}">
@@ -37,11 +37,11 @@
                                 </a>
                             </li>
                         @endforeach
-                    </ul>    
+                    </ul>
                 @endforeach
             @endif
-        </div>
-        
+        </div> --}}
+
         <!-- News Letter subscription -->
         @if (core()->getConfigData('customer.settings.newsletter.subscription'))
             <div class="grid gap-2.5">
